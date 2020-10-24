@@ -5,5 +5,5 @@ from .models import Blog
 
 
 def allblogs(request):
-    blogs = Blog.objects
+    blogs = Blog.objects.order_by('-date')
     return render(request, 'blog/allblogs.html', {'blogs':blogs})
