@@ -24,7 +24,3 @@ urlpatterns = [
     path('', jobs.views.home),
     path('blog/', include('blog.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
-print('********+************************')
-print(include('blog.urls'))
-print('********+************************')

@@ -4,5 +4,4 @@ from .models import Job
 
 def home(request):
     jobs = Job.objects
-    response = render(request, 'jobs/home.html', {'jobs':jobs})
-    return response
+    return render(request, 'jobs/home.html', {'jobs':jobs})

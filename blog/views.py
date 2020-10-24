@@ -4,8 +4,4 @@ from django.shortcuts import render
 
 
 def allblogs(request):
-    print('********+************************')
-    print('in allblogs')
-    print('********+************************')
-    response = render(request, 'blog/allblogs.html')
-    return response
+    return render(request, 'blog/allblogs.html')
