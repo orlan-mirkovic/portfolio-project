@@ -45,6 +45,7 @@
 
 
 
+
     </style>
     <!-- Custom styles for this template -->
     <!-- <link href="css/album.css" rel="stylesheet"> -->
@@ -82,15 +83,18 @@
         <div class="container">
             {% for blog in blogs.all %}
             <div class="media">
-                <img class="align-self-start mr-3" width="64" height="64" src="{{blog.image.url}}" alt="Generic placeholder image">
+                <img class="align-self-start mr-3 img-fluid" width="64" height="64" src="{{blog.image.url}}"
+                     alt="Generic placeholder image">
 
                 <div class="media-body">
-                    <p class="text-info pb-0 mb-0">{{blog.date}}</p>
-                    <h5 class="media-heading mt-0">{{blog.title}}</h5>
-                    <p>{{blog.text}}</p>
+                    <p class="text-info pb-0 mb-0">{{blog.pub_date_pretty}}</p>
+                    <h5 class="media-heading mt-0">
+                        <a href="{{blog.id}}">
+                            {{blog.title}}</a></h5>
+                    <p>{{blog.summary}}</p>
                 </div>
             </div>
-            <hr class=" pt-0 mt-0"/>
+            <!--            <hr class=" pt-0 mt-0"/>-->
             {% endfor %}
         </div>
     </div>
